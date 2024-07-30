@@ -1,0 +1,104 @@
+.kalp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Initially hidden */
+  z-index: 1000;
+}
+
+.kalp-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  display: none; /* Initially hidden */
+}
+
+.kalp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.kalp-modal-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.kalp-close-btn {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.kalp-modal-body {
+  margin-bottom: 20px;
+}
+
+.kalp-modal-body h3 {
+  margin: 0;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.kalp-modal-body p {
+  margin: 0 0 20px 0;
+}
+
+.kalp-modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kalp-modal-body label {
+  margin-bottom: 5px;
+}
+
+.kalp-modal-body input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Adjust width for padding and border */
+}
+
+.kalp-modal-body button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.kalp-modal-body button:hover {
+  background-color: #0056b3;
+}
+
+.kalp-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kalp-modal-footer button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.kalp-modal-footer button:hover {
+  background-color: #c82333;
+}
