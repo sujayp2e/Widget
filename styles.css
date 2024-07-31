@@ -1,104 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
 .kalp-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none; /* Initially hidden */
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .kalp-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1001;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 8px;
-  display: none; /* Initially hidden */
+  max-width: 979px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 23.029px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .kalp-modal-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
-  margin-bottom: 20px;
-}
-
-.kalp-modal-header h2 {
-  margin: 0;
-  font-size: 1.5em;
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
 .kalp-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
   cursor: pointer;
-  font-size: 1.5em;
+  color: #000;
+  border: none;
+  background: transparent;
+}
+
+.kalp-close-btn:hover {
+  color: red;
+  background: transparent;
 }
 
 .kalp-modal-body {
-  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
-.kalp-modal-body h3 {
-  margin: 0;
-  font-size: 1.2em;
+.kalp-modal-body .left-section {
+  flex: 1;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kalp-modal-body .left-section h3 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.kalp-modal-body p {
-  margin: 0 0 20px 0;
+.kalp-modal-body .left-section p {
+  margin-bottom: 20px;
 }
 
-.kalp-modal-body form {
+.kalp-modal-body .right-section {
+  flex: 2;
+  position: relative;
+  padding: 35px;
+}
+
+.kalp-modal-body .right-section h2 {
+  color: var(--Neutral-Grey-75, #191919);
+  font-family: "Source Sans 3";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 49.4px */
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+
+.kalp-modal-body .right-section p {
+  color: var(--Information-Subtle-text, #404040);
+  font-family: "Source Sans 3";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 28.6px */
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.kalp-modal-body .right-section label {
+  display: block;
+  margin-top: 5px;
+  color: var(--KS_grey1, #191919);
+  font-family: "Source Sans 3";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 20.8px */
+  text-transform: capitalize;
+}
+
+.kalp-modal-body .right-section input {
+  width: 100%;
+  padding: 10px;
+}
+
+.kalp-modal-body .right-section .phone-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.kalp-modal-body .right-section .phone-input-wrapper input {
+  margin-right: 10px;
+}
+
+.kalp-modal-body .right-section .submit-button {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.kalp-modal-body .right-section .submit-button:hover {
+  background: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.kalp-modal-body .right-section .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.kalp-modal-body .right-section .form-group {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.kalp-modal-body label {
-  margin-bottom: 5px;
-}
-
-.kalp-modal-body input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: calc(100% - 22px); /* Adjust width for padding and border */
-}
-
-.kalp-modal-body button {
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.kalp-modal-body button:hover {
-  background-color: #0056b3;
-}
-
-.kalp-modal-footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.kalp-modal-footer button {
-  padding: 10px 20px;
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.kalp-modal-footer button:hover {
-  background-color: #c82333;
+.kalp-modal-body .right-section input[type="text"],
+.kalp-modal-body .right-section input[type="email"] {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--KS_Grey3, #d1d4d6);
+  background: #fff;
+  padding: 18px 20px;
 }
