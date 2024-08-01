@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="form-row">
               <div class="form-group">
                 <label for="kalp-full-name">Full Name *</label>
-                <input type="text" id="kalp-full-name" autocomplete="off" name="full-name" value="John David" required>
+                <input type="text" id="kalp-full-name" autocomplete="off" name="full-name" placeholder="John David" required>
               </div>
               <div class="form-group">
                 <label for="kalp-phone-number">Phone Number *</label>
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <select id="kalp-phone-code" name="phone-code" required>
                     <!-- Options will be populated here -->
                   </select>
-                  <input type="text" id="kalp-phone-number" autocomplete="off" name="phone-number" value="0000000000" required>
+                  <input type="text" id="kalp-phone-number" autocomplete="off" name="phone-number" placeholder="0000000000" required>
                 </div>
               </div>
             </div>
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function populateCountryCodes() {
       const countryCodes = [
-        { code: "+1", name: "US", flag: "🇺🇸" },
         { code: "+91", name: "IN", flag: "🇮🇳" },
+        { code: "+1", name: "US", flag: "🇺🇸" },
         { code: "+44", name: "GB", flag: "🇬🇧" },
         { code: "+61", name: "AU", flag: "🇦🇺" },
         { code: "+86", name: "CN", flag: "🇨🇳" },
@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     populateCountryCodes();
 
-    setTimeout(showModal, 5000);
+    setTimeout(showModal, 10000);
 
     const submitButton = modal.querySelector(".submit-button");
     submitButton.addEventListener("click", async (event) => {
