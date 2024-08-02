@@ -173,7 +173,7 @@ body {
   border: 1px solid var(--KS_Grey3, #d1d4d6);
   background: #fff;
   padding: 18px 20px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .phone-input-wrapper select {
