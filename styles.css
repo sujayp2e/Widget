@@ -177,7 +177,7 @@ body {
 }
 
 .phone-input-wrapper select {
-  width: 65px;
+  width: auto;
   border-radius: 10px;
   background: #fff;
   display: flex;
@@ -334,4 +334,9 @@ body {
 
 #kalp-phone-number {
   padding: 18px 10px;
+}
+
+
+.kalp-phone-code{
+  width: 100%;
 }
