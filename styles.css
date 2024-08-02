@@ -176,7 +176,7 @@ body {
   font-size: 20px;
 }
 .phone-input-wrapper select {
-  width: 85px;
+  width: 65px;
   border-radius: 10px;
   background: #fff;
   display: flex;
@@ -189,7 +189,6 @@ body {
 
 .phone-input-wrapper input {
   border: none !important;
-  /* padding: 10px 5px; */
   font-size: 20px !important;
 }
 
@@ -205,7 +204,6 @@ body {
   border: 1px solid var(--KS_Grey3, #d1d4d6);
   background: #fff;
   display: flex;
-  gap: 10px;
 }
 
 .submit-button {

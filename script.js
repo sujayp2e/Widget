@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
       countryCodes.forEach((country) => {
         const option = document.createElement("option");
         option.value = country.code;
-        option.textContent = `${country.flag} (${country.code})`;
+        option.textContent = `${country.flag}`;
         select.appendChild(option);
       });
     }
