@@ -412,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
           const response = await fetch(
-            "https://dev-kalp-cmsapi.p2eppl.com/v1/enquiry",
+            "https://admin-api.kalp.studio/v1/enquiry",
             {
               method: "POST",
               headers: {
