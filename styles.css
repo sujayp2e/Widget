@@ -20,7 +20,7 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .kalp-modal {
