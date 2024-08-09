@@ -337,6 +337,15 @@ body {
 }
 
 
-.kalp-phone-code{
+.kalp-phone-code {
   width: 100%;
+}
+
+@media only screen and (max-width: 390px) {
+  .left-section {
+    display: none !important;
+  }
+  .close-svg1{
+    display: flex;
+  }
 }
